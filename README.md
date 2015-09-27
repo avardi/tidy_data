@@ -12,18 +12,22 @@ The run_analysis.R script works as follows:
 4) Remove all unecessary colums (keep only std & mean dta)
 5) Group table by subjects & activies
 6) Compute all columns averages (by subject & activity)
-7) write resulting table in txt format 
+7) create a new colunm with activity lables
+8) write resulting table in txt format 
 
 OUTPUT Desctiption:
 ===================
 
-table of 180 rows and 81 columns
+table of 180 rows and 82 columns
 
 Colums description:
 
 col #1: 	integer - subject index (1-30)
 col #2: 	integer  - activity index (1-6)
+col #82:	char - activity label ("WALKING" "WALKING_UPSTAIRS" "WALKING_DOWNSTAIRS" "SITTING" ...)
+
 col #3-81: 	num - mean or std measurment
+
 
   tBodyAcc-mean()-X               
   tBodyAcc-mean()-Y               
