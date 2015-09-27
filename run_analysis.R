@@ -30,7 +30,7 @@ TT <- TT[, Ind]
 t1 <- TT %>% group_by(subject, activity) %>% summarise_each(funs(mean))
 
 #read activity lables
-act <- read.table("C:/Users/Asher/Documents/Asher/R_course/work_area/UCI HAR Dataset/activity_labels.txt")
+act <- read.table("activity_labels.txt")
 lbl <- as.character(act$V2)
 # add column with activity lables
 t1 <- mutate(t1, act_labl = t[activity])
@@ -38,5 +38,5 @@ t1 <- mutate(t1, act_labl = t[activity])
 
 
 # write table in txt format
-write.table(t1, file = "tidy_data.txt2", row.name=FALSE)
+write.table(t1, file = "tidy_data.txt", row.name=FALSE)
 
